@@ -2065,8 +2065,7 @@
   height: 45px;
   /* width: 10rem; */
   background-repeat: no-repeat;
-  background-position: center center; /* 确保图像居中 */
-  filter: invert(100%) grayscale(100%);
+  background-position: center center;
   background-size: 100%;
   transition: background-image .25s, background-color .25s;
   margin: 0; /* 清除 margin */

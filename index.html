@@ -111,9 +111,9 @@
 					<div class="image__hero image__hero--inner">
 						<div class="photocred-inline image-wrapper  color--white lazyloaded" style="background-image: url(./images/main-bg2.jpg);"></div>
 						<div class="container-fluid">
-							<h1 class="section__title js-hero-title">脚部模型</h1>
+							<h1 class="section__title js-hero-title">会社概要</h1>
 							<p class="lead js-hero-description-container is-hidden-mobile max-text-container">
-							<span class="hero-description js-hero-description">我们的男性脚部模型注重还原骨骼轮廓和肌肉纹理，彰显力量与真实感，适合专业教学与技术展示。而女性脚部模型则以纤细优雅为设计理念，质感细腻，完美呈现女性足部的美感，是美容美甲与时尚展示的不二之选。</span>
+							<span class="hero-description js-hero-description">私たちは、専門家や愛好家の多様なニーズに応えるため、最高品質で超リアルな足部モデルの提供に尽力しています。トレーニング、展示、教育用途のいずれであっても、当社の製品は卓越したディテールと本物のような質感、そして長期間の耐久性を兼ね備え、本物らしさと安全性の両立を実現しています。</span>
 							<a href="#" class="text-bold short-desciption__read js-catalogue-more">进一步了解</a>
 							</p>
 						</div>
@@ -121,9 +121,9 @@
 					<div class="image__hero image__hero--inner">
 					<div class="photocred-inline image-wrapper  color--white lazyloaded" style="background-image: url(./images/main-bg3.jpg);"></div>
 					<div class="container-fluid">
-						<h1 class="section__title js-hero-title">女性脚部模型</h1>
+						<h1 class="section__title js-hero-title">お問い合わせ</h1>
 						<p class="lead js-hero-description-container is-hidden-mobile max-text-container">
-							<span class="hero-description js-hero-description">女性脚部模型以优雅与精致为核心设计理念，完美再现女性足部的纤细线条和光滑皮肤质感。适合用于美甲艺术创作、足部护理培训以及时尚鞋履展示。我们的模型触感柔软，细节逼真，是各类美容与时尚从业者的理想之选，同时也是教学与展示的绝佳工具。</span>
+							<span class="hero-description js-hero-description"></span>
 						</p>
 					</div>
 					</div>
@@ -140,16 +140,16 @@
 				<div class="container-fluid">
 					<nav class="filter__buttons parent js-filter-buttons active">
 						<div class="filter__buttons--inner" id="proWrap">
-								<!-- <a href="" class="filter-button js-filter-category current active">
+								<a href="" class="filter-button js-filter-category current active">
 									製品一覧
 								</a>
 								<a href="" class="filter-button js-filter-category">
-									全部
+									会社概要
 								</a>
 								<a href="" class="filter-button js-filter-category">
-									女性脚部模型
+									お問い合わせ
 								</a>
-								<a href="" class="filter-button js-filter-category" >
+								<!-- <a href="" class="filter-button js-filter-category" >
 									男性脚部模型
 								</a> -->
 						</div>
@@ -303,6 +303,103 @@
 										</div>
 									</div>
 								</article>
+							</div>
+							<div class="lights-wrap" style="display: none;">
+								<div style="text-align: center; margin: 2rem 0;">
+									<img src="images/aisatsu.jpg" alt="代表挨拶" style="max-width: 100%; height: auto; border-radius: 8px;">
+								</div>
+								<div style="text-align: center; margin: 2rem 0;">
+									<img src="images/gaiyo.jpg" alt="会社概要" style="max-width: 100%; height: auto; border-radius: 8px;">
+								</div>
+							</div>
+							<div class="lights-wrap" style="display: none;">
+								<style>
+									.contact-container {
+									  max-width: 500px;
+									  margin: 40px auto;
+									  padding: 30px;
+									  background-color: #fff;
+									  border: 2px solid #e0eafc;
+									  border-radius: 10px;
+									  box-shadow: 0 0 20px rgba(0, 70, 150, 0.05);
+									  font-family: "Helvetica Neue", sans-serif;
+									}
+								  
+									.contact-container h2 {
+									  text-align: center;
+									  margin-bottom: 20px;
+									  color: #2a5dca; /* 主标题蓝色 */
+									}
+								  
+									.contact-container input,
+									.contact-container textarea {
+									  width: 100%;
+									  padding: 12px;
+									  margin-bottom: 16px;
+									  border: 1px solid #bcd1f3;
+									  border-radius: 6px;
+									  font-size: 16px;
+									  box-sizing: border-box;
+									}
+								  
+									.contact-container input:focus,
+									.contact-container textarea:focus {
+									  outline: none;
+									  border-color: #2a5dca;
+									  box-shadow: 0 0 5px rgba(42, 93, 202, 0.3);
+									}
+								  
+									.contact-container button {
+									  width: 100%;
+									  background-color: #2a5dca;
+									  color: white;
+									  padding: 12px;
+									  border: none;
+									  border-radius: 6px;
+									  font-size: 16px;
+									  cursor: pointer;
+									  transition: background-color 0.3s ease;
+									}
+								  
+									.contact-container button:hover {
+									  background-color: #1e47a7;
+									}
+								  </style>
+								  
+								  <div class="contact-container">
+									<h2>お問い合わせフォーム</h2>
+									<form id="contact-form">
+									  <input name="name" placeholder="お名前" required>
+									  <input name="email" type="email" placeholder="メールアドレス" required>
+									  <textarea name="message" placeholder="お問い合わせ内容" rows="5" required></textarea>
+									  <button type="submit">送信する</button>
+									</form>
+								  </div>
+								  
+								  <script>
+									document.getElementById("contact-form").addEventListener("submit", async function (e) {
+									  e.preventDefault();
+									  const formData = new FormData(e.target);
+									  const data = Object.fromEntries(formData.entries());
+								  
+									  try {
+										const res = await fetch("https://qsi4np79th.execute-api.ap-northeast-1.amazonaws.com/prod", {
+										  method: "POST",
+										  headers: { "Content-Type": "application/json" },
+										  body: JSON.stringify(data)
+										});
+								  
+										if (res.ok) {
+										  alert("送信完了。ありがとうございます。");
+										  e.target.reset();
+										} else {
+										  alert("送信に失敗しました。サーバーエラーです。");
+										}
+									  } catch (err) {
+										alert("送信エラー：" + err.message);
+									  }
+									});
+								  </script>
 							</div>
 						</div>
 					</div>

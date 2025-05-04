@@ -31612,7 +31612,6 @@ a.product__explore-link.is-open {
 }
 
 .product__information .product__short-description {
-  display: none;
   padding-top: 0;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem

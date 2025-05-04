@@ -241,28 +241,46 @@
 			</div>
 		</footer>
         <script>
-            document.getElementById("contact-form").addEventListener("submit", async function (e) {
-              e.preventDefault();
-              const formData = new FormData(e.target);
-              const data = Object.fromEntries(formData.entries());
-          
-              try {
-                const res = await fetch("https://j0lcsfqgmi.execute-api.ap-northeast-1.amazonaws.com/prod", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify(data)
-                });
-          
-                if (res.ok) {
-                  alert("送信完了。ありがとうございます。");
-                  window.location.href = "pay.html";  // ✅ 成功后跳转
-                } else {
-                  alert("送信に失敗しました。サーバーエラーです。");
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("contact-form");
+                if (!form) {
+                    console.log("❌ 表单未找到！");
+                    return;
                 }
-              } catch (err) {
+                console.log("✅ 表单已找到，准备绑定提交事件。");
+                document.getElementById("contact-form").addEventListener("submit", async function (e) {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData.entries());
+
+                console.log("即将发送：", data);
+
+                try {
+                    const res = await fetch("https://j0lcsfqgmi.execute-api.ap-northeast-1.amazonaws.com/prod", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(data)
+                    });
+
+                    const text = await res.text(); // 先以纯文本获取
+                    let json = {};
+                    try {
+                        json = JSON.parse(text);  // 再尝试转为 JSON
+                    } catch (parseError) {
+                        console.error("JSON 解析失败:", parseError, text);
+                    }
+
+                    if (res.ok) {
+                        alert("送信完了。ありがとうございます。");
+                        window.location.href = "pay.html";
+                    } else {
+                        alert("送信に失敗しました。\n" + (json.error || text));  // 兜底显示原始文本
+                    }
+                } catch (err) {
                 alert("送信エラー：" + err.message);
-              }
+                }
+                });
             });
-        </script>
+            </script>
 	</body>
 </html>
